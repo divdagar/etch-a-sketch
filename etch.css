@@ -83,7 +83,7 @@ display: grid;
     min-height: 1px;
     width: auto;
     margin: 0;
-    border: 1px solid grey;
+    border: 1px solid black;
     display: inline-flex;
     color: white;
     background-color: white;
