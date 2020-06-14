@@ -46,7 +46,6 @@ basic.addEventListener("click",function(){
 
 pro.addEventListener("click",function(){
     mode = "pro";
-    newGrid(num);
     basic.classList.remove("selected");
     pro.classList.add("selected");
     nyan.classList.remove("selected");
@@ -57,7 +56,6 @@ pro.addEventListener("click",function(){
 
 nyan.addEventListener("click",function(){
     mode = "nyan";
-    newGrid(num);
     basic.classList.remove("selected");
     pro.classList.remove("selected");
     nyan.classList.add("selected");
@@ -86,41 +84,31 @@ function makeCells(number){
         }   
 }
 //function used to fill the squares on hover according to mode selected
-
 function draw(){
-    if(mode=="basic"){
-        for (i=0; i<cells.length;i++)
+    
+    for (i=0; i<cells.length;i++)
         {
             cells[i].addEventListener('mouseover', function(){
+                if(mode=="basic"){
             this.style.background = "rgba(0, 0, 0, 1)";  
-            });
-        };
-    }
-
-    else if(mode=="pro"){
-        for (i=0; i<cells.length;i++)
-        {
-            cells[i].addEventListener('mouseover', function(){
-              if (this.style.backgroundColor !== "rgb(0, 0, 0)"){
-                    let shade = this.style.background;
-                    let newShade = increment(shade);
-                    this.style.background = newShade;
                 }
-            });
-        };
-    } 
-
-    else if(mode=="nyan"){
-            for (i=0; i<cells.length;i++)
-            {
-                cells[i].addEventListener('mouseover', function(){
-                  // this.style.background = "rgb(10,10,200)";
-                   this.style.background = colorGen();
-                });
-            };
-        }
-
+                else if(mode=="pro"){
+                    if (this.style.backgroundColor !== "rgb(0, 0, 0)"){
+                        let shade = this.style.background;
+                        let newShade = increment(shade);
+                        this.style.background = newShade;
+                    }
+                }
+                else if(mode=="nyan"){
+                    this.style.background = colorGen();
+                        }
+        
+                 
+        } );      
+    }
 }
+
+
 
 //Function to reset grid
 function newGrid(num){
