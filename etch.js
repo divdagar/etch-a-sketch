@@ -34,7 +34,6 @@ reset.addEventListener("click",function(){
 //event listeners for mode buttons
 basic.addEventListener("click",function(){
     mode = "basic";
-    newGrid(num);
     basic.classList.add("selected");
     pro.classList.remove("selected");
     nyan.classList.remove("selected");
@@ -90,7 +89,7 @@ function draw(){
         {
             cells[i].addEventListener('mouseover', function(){
                 if(mode=="basic"){
-            this.style.background = "rgba(0, 0, 0, 1)";  
+                    this.style.background = "rgba(0, 0, 0, 1)";  
                 }
                 else if(mode=="pro"){
                     if (this.style.backgroundColor !== "rgb(0, 0, 0)"){
