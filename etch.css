@@ -1,0 +1,91 @@
+
+body{
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 35px;
+    background-image: url('http://www.pngmart.com/files/11/Derp-Face-Meme-PNG-Image.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 95% 95%;
+    background-size: 300px;
+    
+      
+}
+
+header h1{
+    text-align: center;
+}
+
+.nyanh1{
+    animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: lime; }
+    80% { color: blue; }
+    100% { color: purple; }
+  }
+
+#main{
+
+    display: flex;
+    height: 500px;
+    align-items: flex-start;
+}
+
+#modes{
+    width: 20%;
+    margin: auto 10px;   
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+#reset{
+    margin: auto;
+}
+
+button{
+    margin: 4px;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 5%;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+button:focus{
+    outline: 0;
+    border: 1px solid black;
+}
+.selected{
+    background-color: black;
+    color: white;
+}
+
+#container{
+width: 70%;
+max-width: 600px;
+margin: auto;
+display: grid;
+}
+.row{
+    margin: 0;
+    display: flex;
+    justify-content: center ;
+    width: 600px;
+}
+.cell{
+
+    min-width: 1px;
+    min-height: 1px;
+    width: auto;
+    margin: 0;
+    border: 1px solid grey;
+    display: inline-flex;
+    color: white;
+    background-color: white;
+
+}
+
