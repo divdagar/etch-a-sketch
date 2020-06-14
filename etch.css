@@ -6,13 +6,14 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 95% 95%;
-    background-size: 300px;
+    background-size: 200px;
     
       
 }
 
 header h1{
     text-align: center;
+    margin: 10px 0;
 }
 
 .nyanh1{
